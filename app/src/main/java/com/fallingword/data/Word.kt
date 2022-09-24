@@ -1,8 +1,8 @@
 package com.fallingword.data
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
 
 data class Word(
-    @field:Json(name = "text_eng") val englishText: String,
-    @field:Json(name = "text_spa") val spanishText: String
+    @SerializedName("text_eng") val englishText: String,
+    @SerializedName("text_spa") val spanishText: String
 )
