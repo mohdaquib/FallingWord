@@ -71,7 +71,7 @@ dependencies {
 
     // Testing
     testImplementation 'junit:junit:4.13.2'
-    testImplementation "org.mockito.kotlin:mockito-kotlin:$mockito_version_kotlin"
+    testImplementation "io.mockk:mockk:1.12.8"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
 
     // UI testing
