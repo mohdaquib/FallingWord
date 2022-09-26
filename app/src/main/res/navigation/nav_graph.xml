@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wordListFragment">
+
+    <fragment
+        android:id="@+id/wordListFragment"
+        android:name="com.fallingword.ui.wordlist.WordListFragment"
+        android:label="@string/word_list_fragment_name" >
+        <action
+            android:id="@+id/action_wordListFragment_to_gameResultFragment"
+            app:destination="@id/gameResultFragment">
+            <argument
+                android:name="score"
+                app:argType="integer"
+                android:defaultValue="-1" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameResultFragment"
+        android:name="com.fallingword.ui.result.GameResultFragment"
+        android:label="@string/game_result_fragment"
+        tools:layout="@layout/fragment_game_result" >
+        <argument
+            android:name="score"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <action
+            android:id="@+id/action_gameResultFragment_to_wordListFragment"
+            app:destination="@id/wordListFragment" />
+    </fragment>
+</navigation>
